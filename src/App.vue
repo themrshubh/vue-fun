@@ -1,6 +1,6 @@
 <template>
-  <div class="container mt-3 mb-3" style="padding: 0px;">
-      <b-card class="border-0 rounded" no-body>
+  <div class="container pt-md-5 mb-md-3" style="padding: 0px;">
+      <b-card class="shadow-card border-0 rounded" no-body>
         <b-tabs class="border-0" pills card>
           <b-tab title="About" active><b-card-text><about /></b-card-text></b-tab>
           <b-tab title="Kanban"><b-card-text><board /></b-card-text></b-tab>
@@ -109,5 +109,21 @@ export default {
 
 .card-header{
   background-color:rgb(20, 20, 20) !important;
+}
+
+.nav-link.active{
+  background-color:rgba(104, 104, 104, 0.336) !important;
+}
+
+.nav-link{
+  color: rgb(104, 104, 104);
+}
+
+.nav-link:hover{
+  color: rgb(255, 0, 93)
+}
+
+.shadow-card{
+  box-shadow: 0 2rem 3rem 0.5rem rgba(0, 0, 0, 0.75) !important;
 }
 </style>

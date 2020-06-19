@@ -64,20 +64,19 @@ export default {
 .joke{
   text-align: center; 
   font-weight:normal;
-  background: -webkit-linear-gradient(135deg, rgba(234, 0, 255, 0.5), rgba(0, 225, 255, 0.5));
+  background: -webkit-linear-gradient(135deg,rgba(0, 225, 255, 0.5), rgb(255, 0, 64));
   background-clip:text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.dark-button{
-  background-color:rgba(104, 104, 104, 0.137) !important;
-  color:rgb(199, 199, 199)
-}
+  .dark-button{
+    background-color:rgba(104, 104, 104, 0.137) !important;
+    color:rgb(199, 199, 199)
+  }
 
-.dark-button:hover{
-  background-color: rgba(0, 0, 0, 0.247);
-  background-image: linear-gradient(to bottom right, rgba(255, 0, 179, 0.281), rgba(0, 140, 255, 0.404));
-  color:rgb(212, 212, 212)
-}
+  .dark-button:hover{
+    background-color: rgba(255, 255, 255, 0.116) !important;
+    color:rgb(212, 212, 212)
+  }
 </style>

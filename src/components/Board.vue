@@ -16,12 +16,12 @@
       </b-col>
     </b-row>
     <div class="row mt-3">
-      <div class="col-md-3 p-2 pl-3">
+      <div class="col-md-3 p-2 pl-md-3">
         <div class="p-2 alert alert-custom-1">
           <h3 class="todo">To-do</h3>
           <div class="board-height">
             <draggable class="list-group content" :list="todo" group="tasks">
-                <div style="margin:5px" class="list-group-item kanban-card rounded text-light" v-for="element in todo" :key="element.name">
+                <div style="margin:5px" class="list-group-item alert-custom-1 rounded text-light" v-for="element in todo" :key="element.name">
                   {{element.name}}
                 </div>
             </draggable>
@@ -33,7 +33,7 @@
           <h3 class="planning">Planning</h3>
           <div class="board-height">
             <draggable class="list-group content" :list="plan" group="tasks">
-              <div style="margin:5px" class="list-group-item kanban-card rounded text-light" v-for="element in plan" :key="element.name">
+              <div style="margin:5px" class="list-group-item alert-custom-2 rounded text-light" v-for="element in plan" :key="element.name">
                 {{element.name}}
               </div>
             </draggable>
@@ -46,19 +46,19 @@
           <h3 class="inprogress">In Progress</h3>
           <div class="board-height">
             <draggable class="list-group content" :list="inprogress" group="tasks">
-              <div style="margin:5px" class="list-group-item kanban-card rounded text-light" v-for="element in inprogress" :key="element.name">
+              <div style="margin:5px" class="list-group-item alert-custom-3 rounded text-light" v-for="element in inprogress" :key="element.name">
                 {{element.name}}
               </div>
             </draggable>
           </div>
         </div>
       </div>
-      <div class="col-md-3 p-2 pr-3">
+      <div class="col-md-3 p-2 pr-md-3">
         <div class="p-2 alert alert-custom-4">
           <h3 class="done">Done</h3>
           <div class="board-hight">
             <draggable class="list-group content" :list="done" group="tasks">
-              <div style="margin:5px" class="list-group-item kanban-card rounded text-light" v-for="element in done" :key="element.name">
+              <div style="margin:5px" class="list-group-item alert-custom-4 rounded text-light" v-for="element in done" :key="element.name">
                 {{element.name}}
               </div>
             </draggable>
@@ -129,44 +129,39 @@ export default {
   }
 
   .dark-button:hover{
-    background-color: rgba(0, 0, 0, 0.247);
-    background-image: linear-gradient(to bottom right, rgba(255, 0, 179, 0.281), rgba(0, 140, 255, 0.404));
+    background-color: rgba(255, 255, 255, 0.116) !important;
     color:rgb(212, 212, 212)
   }
 
   .todo{
-    color: rgba(255, 0, 179, 1)
+    color: rgb(255, 0, 93)
   }
 
   .planning{
-    color: rgba(162, 0, 255, 1);
-  }
-
-  .inprogress{
-    color: rgba(76, 0, 255, 1);
+    color: rgba(255, 208, 0, 1);
   }
 
   .done{
-    color:rgba(0, 140, 255, 1);
+    color: rgba(0, 195, 255, 1);
+  }
+
+  .inprogress{
+    color:rgba(0, 255, 156, 1);
   }
 
   .alert-custom-1{
-    background-color:rgba(255, 0, 179, 0.15);
+    background-color:rgba(255, 0, 93, 0.12);
   }
 
   .alert-custom-2{
-    background-color:rgba(162, 0, 255, 0.15);
+    background-color:rgba(255, 208, 0, 0.12);
   }
 
   .alert-custom-3{
-    background-color:rgba(76, 0, 255, 0.150);
+    background-color:rgba(0, 255, 156, 0.12);
   }
 
-  .alert-custom-4{
-    background-color:rgba(0, 140, 255, 0.15);
-  }
-
-  .kanban-card{
-    background-color: rgba(167, 167, 167, 0.096);
+    .alert-custom-4{
+    background-color:rgba(0, 195, 255, 0.12);
   }
 </style>

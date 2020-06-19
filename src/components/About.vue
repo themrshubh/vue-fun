@@ -13,7 +13,7 @@
     <b-row align-h="center mt-3">
       <b-col cols="md-6">
         <b-card class="text-muted dark-bg">
-          Hello! <br><br>
+          Hello 🥳 <br><br>
           This is a fun little web app that uses various functionalities of Vue.js. 
           It has sub-sections that can be accessed via the tabs above. 
           Each of the above sections is further developed as a component. 
@@ -29,7 +29,7 @@
 .title{
   text-align: center; 
   font-weight:normal;
-  background: -webkit-linear-gradient(135deg, rgba(234, 0, 255, 0.5), rgba(0, 225, 255, 0.5));
+  background: -webkit-linear-gradient(135deg,rgba(0, 225, 255, 0.5), rgba(255, 0, 93, 1));
   background-clip:text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
