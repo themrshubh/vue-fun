@@ -21,7 +21,7 @@
           <h3 class="todo">To-do</h3>
           <div class="board-height">
             <draggable class="list-group content" :list="todo" group="tasks">
-                <div style="margin:5px" class="list-group-item alert-custom-1 rounded text-light" v-for="element in todo" :key="element.name">
+                <div style="margin:5px" class="list-group-item alert-custom-1 rounded text-light" v-for="element in todo" :key="element.index">
                   {{element.name}}
                 </div>
             </draggable>
@@ -85,9 +85,19 @@ export default {
         {name: "Find a covid cure"},
         {name: "Make pizza"},
       ],
-      plan:[],
-      inprogress:[],
-      done:[]
+      plan:[
+        {name: "Check B.E Project"},
+        {name: "Update LinkedIn"}
+      ],
+      inprogress:[
+        {name: "Stanford: Algorithms"}
+      ],
+      done:[
+        {name: "Black Book"},
+        {name: "Develop Alexa Skill"},
+        {name: "Configure AWS Gateway"},
+        {name: "Deploy Flask API"},
+      ]
     }
   },
   methods:{
@@ -96,6 +106,9 @@ export default {
         this.todo.unshift({name: this.newTask});
         this.newTask = ''
       }
+    },
+    del(){
+
     }
   }
 }

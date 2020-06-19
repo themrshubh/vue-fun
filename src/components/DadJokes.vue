@@ -12,7 +12,7 @@
     </b-row>
     <b-row align-h="center">
       <b-col class="text-center p-1" cols="md-9">
-        <b-jumbotron class="jumbo-background mb-5">
+        <b-jumbotron class="jumbo-background m-md-5">
           <div class="mb-5">
             <h1 class="joke">{{joke}}</h1>
           </div>
@@ -58,7 +58,6 @@ export default {
 <style>
 .jumbo-background{
   background-color: rgba(20, 20, 20, 0.753) !important;
-  margin: 5%
 }
 
 .joke{

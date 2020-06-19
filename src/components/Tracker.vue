@@ -12,7 +12,7 @@
     </b-row>
     <b-row align-h="center">
       <b-col cols="md-8">
-        <b-card class="dark-bg mb-5 mt-3" no-body><graph style="padding: 0px" :chartData="chartData" :options="options" /></b-card>
+        <b-card class="dark-bg mt-3" no-body><graph style="padding: 0px; margin:0px" :chartData="chartData" :options="options" /></b-card>
       </b-col>
     </b-row>
   </b-container>
@@ -32,6 +32,11 @@ export default {
 <style>
 .dark-bg{
   background-color: rgba(20, 20, 20, 0.753) !important;
+  margin:0px
+}
+
+.graph-subtitle{
+  color: rgb(255, 0, 93)
 }
 
 </style>

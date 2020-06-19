@@ -1,5 +1,5 @@
 <template>
-  <div class="container pt-md-5 mb-md-3" style="padding: 0px;">
+  <div class="container pt-md-3 mb-md-3" style="padding: 0px; margin:auto">
       <b-card class="shadow-card border-0 rounded" no-body>
         <b-tabs class="border-0" pills card>
           <b-tab title="About" active><b-card-text><about /></b-card-text></b-tab>
