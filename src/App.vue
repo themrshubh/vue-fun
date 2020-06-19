@@ -43,13 +43,25 @@ export default {
                 },
                 gridLines: {
                   color: 'rgba(255, 255, 255, 0.1)',
+                },
+                scaleLabel:{
+                  display:true,
+                  labelString:"Date",
+                  fontStyle: 'italic',
+                  fontColor:'rgba(255, 255, 255, 0.1)'
                 }
             }],
             yAxes:[{
               gridLines: {
                 color: 'rgba(255, 255, 255, 0.1)',
                 zeroLineColor: 'rgba(255, 255, 255, 0.5)'
-              }
+              },
+              scaleLabel:{
+                  display:true,
+                  labelString:"No. of people",
+                  fontStyle: 'italic',
+                  fontColor:'rgba(255, 255, 255, 0.1)'
+                }
             }]
             
         },
@@ -121,6 +133,10 @@ export default {
 
 .nav-link:hover{
   color: rgb(255, 0, 93)
+}
+
+.nav-link:focus{
+  outline:0
 }
 
 .shadow-card{
