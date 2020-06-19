@@ -11,7 +11,7 @@
       </b-col>
     </b-row>
     <b-row align-h="center">
-      <b-col class="text-center" cols="9">
+      <b-col class="text-center p-1" cols="md-9">
         <b-jumbotron class="jumbo-background mb-5">
           <div class="mb-5">
             <h1 class="joke">{{joke}}</h1>

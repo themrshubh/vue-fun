@@ -1,5 +1,5 @@
 <template>
-  <b-container style="padding: 0px;">
+  <b-container style="padding: 0px; min-height:60vh">
     <b-row>
       <b-col>
         <h3 class="text-muted">COVID-19 Tracker</h3>
@@ -11,7 +11,7 @@
       </b-col>
     </b-row>
     <b-row align-h="center">
-      <b-col cols="8">
+      <b-col cols="md-8">
         <b-card class="dark-bg mb-5 mt-3" no-body><graph style="padding: 0px" :chartData="chartData" :options="options" /></b-card>
       </b-col>
     </b-row>

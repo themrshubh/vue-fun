@@ -19,41 +19,50 @@
       <div class="col-md-3 p-2 pl-3">
         <div class="p-2 alert alert-custom-1">
           <h3 class="todo">To-do</h3>
-          <draggable class="list-group board-height" :list="todo" group="tasks">
-            <div style="margin:5px" class="list-group-item kanban-card rounded text-light" v-for="element in todo" :key="element.name">
-              {{element.name}}
-            </div>
-          </draggable>
+          <div class="board-height">
+            <draggable class="list-group content" :list="todo" group="tasks">
+                <div style="margin:5px" class="list-group-item kanban-card rounded text-light" v-for="element in todo" :key="element.name">
+                  {{element.name}}
+                </div>
+            </draggable>
+          </div>
         </div>
       </div>
       <div class="col-md-3 p-2">
         <div class="p-2 alert alert-custom-2">
           <h3 class="planning">Planning</h3>
-          <draggable class="list-group board-height" :list="plan" group="tasks">
-            <div style="margin:5px" class="list-group-item kanban-card rounded text-light" v-for="element in plan" :key="element.name">
-              {{element.name}}
-            </div>
-          </draggable>
+          <div class="board-height">
+            <draggable class="list-group content" :list="plan" group="tasks">
+              <div style="margin:5px" class="list-group-item kanban-card rounded text-light" v-for="element in plan" :key="element.name">
+                {{element.name}}
+              </div>
+            </draggable>
+          </div>
+          
         </div>
       </div>
       <div class="col-md-3 p-2">
         <div class="p-2 alert alert-custom-3">
           <h3 class="inprogress">In Progress</h3>
-          <draggable class="list-group board-height" :list="inprogress" group="tasks">
-            <div style="margin:5px" class="list-group-item kanban-card rounded text-light" v-for="element in inprogress" :key="element.name">
-              {{element.name}}
-            </div>
-          </draggable>
+          <div class="board-height">
+            <draggable class="list-group content" :list="inprogress" group="tasks">
+              <div style="margin:5px" class="list-group-item kanban-card rounded text-light" v-for="element in inprogress" :key="element.name">
+                {{element.name}}
+              </div>
+            </draggable>
+          </div>
         </div>
       </div>
       <div class="col-md-3 p-2 pr-3">
         <div class="p-2 alert alert-custom-4">
           <h3 class="done">Done</h3>
-          <draggable class="list-group board-height" :list="done" group="tasks">
-            <div style="margin:5px" class="list-group-item kanban-card rounded text-light" v-for="element in done" :key="element.name">
-              {{element.name}}
-            </div>
-          </draggable>
+          <div class="board-hight">
+            <draggable class="list-group content" :list="done" group="tasks">
+              <div style="margin:5px" class="list-group-item kanban-card rounded text-light" v-for="element in done" :key="element.name">
+                {{element.name}}
+              </div>
+            </draggable>
+          </div>
         </div>
       </div>
     </div>
@@ -84,7 +93,7 @@ export default {
   methods:{
     add(){
       if(this.newTask){
-        this.todo.push({name: this.newTask});
+        this.todo.unshift({name: this.newTask});
         this.newTask = ''
       }
     }
@@ -94,7 +103,12 @@ export default {
 
 <style scoped>
   .board-height{
-    min-height: 40vh;
+    height: 40vh;
+  }
+
+  .content{
+    height: 40vh;
+    overflow: auto
   }
 
   .list-group-item:hover{

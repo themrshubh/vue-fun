@@ -1,8 +1,9 @@
 <template>
-  <div class="container mt-3" style="padding: 0px;">
+  <div class="container mt-3 mb-3" style="padding: 0px;">
       <b-card class="border-0 rounded" no-body>
         <b-tabs class="border-0" pills card>
-          <b-tab title="Kanban" active><b-card-text><board /></b-card-text></b-tab>
+          <b-tab title="About" active><b-card-text><about /></b-card-text></b-tab>
+          <b-tab title="Kanban"><b-card-text><board /></b-card-text></b-tab>
           <b-tab title="Jokes"><b-card-text><dad-jokes /></b-card-text></b-tab>
           <b-tab title="Tracker" @click="trackerCalled">
             <b-card-text>
@@ -18,13 +19,15 @@
 import Board from './components/Board.vue';
 import DadJokes from './components/DadJokes.vue';
 import Tracker from './components/Tracker.vue';
+import About from './components/About.vue'
 
 export default {
   name: 'App',
   components: {
     Board,
     DadJokes, 
-    Tracker
+    Tracker,
+    About
   },
   data (){
     return {
