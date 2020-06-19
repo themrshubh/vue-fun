@@ -1,8 +1,18 @@
 <template>
-  <b-container style="padding: 0px">
+  <b-container style="padding: 0px;">
+    <b-row>
+      <b-col>
+        <h3 class="text-muted">COVID-19 Tracker</h3>
+        <p class="text-muted">
+          Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus. 
+          This component uses JavaScript to make API calls and plots a graph based on the requested attributes.
+          This showcases the use of prop-chaining and dynamic component loading.
+        </p>
+      </b-col>
+    </b-row>
     <b-row align-h="center">
-      <b-col class="chart-container">
-        <graph :chartData="chartData" :options="options" />
+      <b-col cols="8">
+        <b-card class="dark-bg mb-5 mt-3" no-body><graph style="padding: 0px" :chartData="chartData" :options="options" /></b-card>
       </b-col>
     </b-row>
   </b-container>
@@ -16,52 +26,12 @@ export default {
     Graph
   },
   props:['chartData', 'options'],
-  // data (){
-  //   return {
-  //     options: {
-  //       responsive: true,
-  //       maintainAspectRatio: false,
-  //       scales: {
-  //           xAxes:[{
-  //               type:'time',
-  //               time:{
-  //                 unit: 'month'
-  //               }
-  //           }],
-  //       }
-  //     },
-  //     chartData: {
-  //       labels: [] ,
-  //       datasets:[{
-  //         label: 'Cases',
-  //         data: this.confirmed,
-  //       }]
-  //     },
-  //   }
-  // },
-  // mounted() {
-  //   fetch("https://api.covid19api.com/dayone/country/india", {
-  //     method: "GET",
-  //     headers:{
-  //       Accept: 'application/json'
-  //     }
-  //   })
-  //   .then((response) => {
-  //     return response.json()
-  //   })
-  //   .then((data) => {
-  //     this.chartData.labels = data.map(entry => entry.Date)
-  //     this.chartData.datasets[0].data = data.map(entry => entry.Confirmed)
-  //     this.load = true
-  //   })
-  // }
 }
 </script>
 
-<style scoped>
-.chart-container{
-  position: relative;
-  margin: auto;
-  width: 30vw;
+<style>
+.dark-bg{
+  background-color: rgba(20, 20, 20, 0.753) !important;
 }
+
 </style>

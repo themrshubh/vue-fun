@@ -1,16 +1,16 @@
 <template>
-  <div class="container mt-5" style="padding: 0px">
-    <b-card no-body>
-    <b-tabs pills card>
-      <b-tab title="Kanban" active><b-card-text><board /></b-card-text></b-tab>
-      <b-tab title="Dad Jokes"><b-card-text><dad-jokes /></b-card-text></b-tab>
-      <b-tab title="Tracker" @click="trackerCalled">
-        <b-card-text>
-          <tracker v-if="this.tracker" :chartData="chartData" :options="options" />
-        </b-card-text>
-      </b-tab>
-    </b-tabs>
-  </b-card>
+  <div class="container mt-3" style="padding: 0px;">
+      <b-card class="border-0 rounded" no-body>
+        <b-tabs class="border-0" pills card>
+          <b-tab title="Kanban" active><b-card-text><board /></b-card-text></b-tab>
+          <b-tab title="Jokes"><b-card-text><dad-jokes /></b-card-text></b-tab>
+          <b-tab title="Tracker" @click="trackerCalled">
+            <b-card-text>
+              <tracker v-if="this.tracker" :chartData="chartData" :options="options" />
+            </b-card-text>
+          </b-tab>
+        </b-tabs>
+      </b-card>
   </div>
 </template>
 
@@ -37,8 +37,21 @@ export default {
                 type:'time',
                 time:{
                   unit: 'month'
+                },
+                gridLines: {
+                  color: 'rgba(255, 255, 255, 0.1)',
                 }
             }],
+            yAxes:[{
+              gridLines: {
+                color: 'rgba(255, 255, 255, 0.1)',
+                zeroLineColor: 'rgba(255, 255, 255, 0.5)'
+              }
+            }]
+            
+        },
+        tooltips: {
+          enabled: false
         }
       },
       chartData: {
@@ -46,12 +59,18 @@ export default {
         datasets:[{
           label: 'Confirmed',
           data: [],
-          order:2
+          order:2,
+          backgroundColor: 'rgba(255, 0, 93, 0.15)',
+          borderColor: 'rgba(255, 0, 93, 1)',
+          pointRadius: 0
         },
         {
           label: 'Recovered',
           data: [],
-          order: 1
+          order: 1,
+          backgroundColor: 'rgba(0, 255, 156, 0.15)',
+          borderColor: 'rgba(0, 255, 156, 1)',
+          pointRadius: 0
         }]
       },
     }
@@ -81,12 +100,11 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.tab-content{
+  background-color:rgb(12, 12, 12) !important;
+}
+
+.card-header{
+  background-color:rgb(20, 20, 20) !important;
 }
 </style>
