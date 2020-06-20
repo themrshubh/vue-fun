@@ -12,7 +12,7 @@
     </b-row>
     <b-row align-h="center mt-3">
       <b-col cols="md-6">
-        <b-card class="text-muted dark-bg">
+        <b-card class="text-muted dark-bg-margin">
           Hello 🥳 <br><br>
           This is a fun little web app that uses various functionalities of Vue.js. 
           It has sub-sections that can be accessed via the tabs above. 
@@ -36,7 +36,7 @@
   -webkit-text-fill-color: transparent;
 }
 
-.dark-bg{
+.dark-bg-margin{
   background-color:rgba(50, 50, 50, 0.300) !important;
   margin: 5%
 }

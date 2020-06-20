@@ -24,7 +24,7 @@
           <h3 class="todo">To-do</h3>
           <div class="board-height">
             <draggable class="list-group content" :list="todo" group="tasks">
-                <div style="margin:5px;" class="list-group-item alert-custom-1 rounded text-light" v-for="element in todo" :key="element.index">
+                <div class="add-margin list-group-item alert-custom-1 rounded text-light" v-for="element in todo" :key="element.index">
                   {{element.name}}
                 </div>
             </draggable>
@@ -36,7 +36,7 @@
           <h3 class="planning">Planning</h3>
           <div class="board-height">
             <draggable class="list-group content" :list="plan" group="tasks">
-              <div style="margin:5px" class="list-group-item alert-custom-2 rounded text-light" v-for="element in plan" :key="element.name">
+              <div class="add-margin list-group-item alert-custom-2 rounded text-light" v-for="element in plan" :key="element.name">
                 {{element.name}}
               </div>
             </draggable>
@@ -49,7 +49,7 @@
           <h3 class="inprogress">In Progress</h3>
           <div class="board-height">
             <draggable class="list-group content" :list="inprogress" group="tasks">
-              <div style="margin:5px" class="list-group-item alert-custom-3 rounded text-light" v-for="element in inprogress" :key="element.name">
+              <div class="add-margin list-group-item alert-custom-3 rounded text-light" v-for="element in inprogress" :key="element.name">
                 {{element.name}}
               </div>
             </draggable>
@@ -61,7 +61,7 @@
           <h3 class="done">Done</h3>
           <div class="board-hight">
             <draggable class="list-group content" :list="done" group="tasks">
-              <div style="margin:5px" class="list-group-item alert-custom-4 rounded text-light" v-for="element in done" :key="element.name">
+              <div class="add-margin list-group-item alert-custom-4 rounded text-light" v-for="element in done" :key="element.name">
                 {{element.name}}
               </div>
             </draggable>
@@ -110,9 +110,6 @@ export default {
         this.newTask = ''
       }
     },
-    del(){
-
-    }
   }
 }
 </script>
@@ -177,7 +174,11 @@ export default {
     background-color:rgba(0, 255, 156, 0.12);
   }
 
-    .alert-custom-4{
+  .alert-custom-4{
     background-color:rgba(0, 195, 255, 0.12);
+  }
+
+  .add-margin{
+    margin: 5px !important;
   }
 </style>
