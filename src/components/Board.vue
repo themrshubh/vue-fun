@@ -11,8 +11,11 @@
       </b-col>
     </b-row>
     <b-row>
-      <b-col class="form-inline">
-        <b-form-input class="dark-input border-0 shadow-none text-light" v-model="newTask" placeholder="New" @keyup.enter="add"></b-form-input><b-button class="ml-2 dark-button border-0 shadow-none" @click="add">Add</b-button>
+      <b-col class="pr-md-0" cols="md-3">
+        <b-form-input class="dark-input border-0 shadow-none text-light" v-model="newTask" placeholder="New" @keyup.enter="add"></b-form-input>
+      </b-col>
+      <b-col>
+        <b-button class="dark-button border-0 shadow-none" @click="add">Add</b-button>
       </b-col>
     </b-row>
     <div class="row mt-3">
@@ -21,7 +24,7 @@
           <h3 class="todo">To-do</h3>
           <div class="board-height">
             <draggable class="list-group content" :list="todo" group="tasks">
-                <div style="margin:5px" class="list-group-item alert-custom-1 rounded text-light" v-for="element in todo" :key="element.index">
+                <div style="margin:5px;" class="list-group-item alert-custom-1 rounded text-light" v-for="element in todo" :key="element.index">
                   {{element.name}}
                 </div>
             </draggable>
@@ -70,11 +73,11 @@
 </template>
 
 <script>
-import draggable from 'vuedraggable'
+import draggable from 'vuedraggable';
 
 export default {
   components:{
-    draggable
+    draggable,
   },
   data() {
     return {

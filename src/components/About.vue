@@ -18,7 +18,8 @@
           It has sub-sections that can be accessed via the tabs above. 
           Each of the above sections is further developed as a component. 
           Every section provides a fun little feature that is independent of the others. 
-          I have used <a href="https://vuejs.org/">Vue</a> and <a href="https://getbootstrap.com/">Bootstrap</a> to build and design this web application. 
+          I have used <a href="https://vuejs.org/" target="_blank">Vue</a> and <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a> to build and design this web application.
+          Find out more about me <a href="https://www.linkedin.com/in/smankar/" target="_blank">here</a>. 
         </b-card>
       </b-col>
     </b-row>
@@ -36,7 +37,7 @@
 }
 
 .dark-bg{
-  background-color: rgba(20, 20, 20, 0.753) !important;
+  background-color:rgba(50, 50, 50, 0.300) !important;
   margin: 5%
 }
 </style>

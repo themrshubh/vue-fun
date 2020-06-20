@@ -140,6 +140,6 @@ export default {
 }
 
 .shadow-card{
-  box-shadow: 0 2rem 3rem 0.5rem rgba(0, 0, 0, 0.75) !important;
+  box-shadow: 0 1rem 3rem 0.5rem rgba(0, 0, 0, 0.849) !important;
 }
 </style>

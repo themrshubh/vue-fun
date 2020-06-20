@@ -57,7 +57,7 @@ export default {
 
 <style>
 .jumbo-background{
-  background-color: rgba(20, 20, 20, 0.753) !important;
+  background-color:rgba(50, 50, 50, 0.300) !important;
 }
 
 .joke{
